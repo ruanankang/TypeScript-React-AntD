@@ -1,0 +1,22 @@
+{
+  "name": "typescript-react-antd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruanankang/TypeScript-React-AntD.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ruanankang/TypeScript-React-AntD/issues"
+  },
+  "homepage": "https://github.com/ruanankang/TypeScript-React-AntD#readme",
+  "devDependencies": {
+    "cross-env": "^7.0.2"
+  }
+}
