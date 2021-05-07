@@ -1,7 +1,12 @@
 .btn {
 	position: relative;
 	display: inline-block;
-	font-size: $btn-font-size;
+	@include button-size(
+		$btn-padding-x,
+		$btn-padding-y,
+		$btn-font-size,
+		$btn-border-radius
+	);
 	font-weight: $btn-font-weight;
 	line-height: $btn-line-height;
 	color: $body-color;
@@ -10,8 +15,6 @@
 	vertical-align: middle;
 	background-image: none;
 	border: $btn-border-width solid transparent;
-	border-radius: $btn-border-radius;
-	padding: $btn-padding-y $btn-padding-x;
 	box-shadow: $btn-box-shadow;
 	cursor: pointer;
 	transition: $btn-transition;
@@ -27,4 +30,22 @@
 			pointer-events: none;
 		}
 	}
+}
+
+.btn-lg {
+	@include button-size(
+		$btn-padding-x-lg,
+		$btn-padding-y-lg,
+		$btn-font-size-lg,
+		$btn-border-radius-lg
+	);
+}
+
+.btn-sm {
+	@include button-size(
+		$btn-padding-x-sm,
+		$btn-padding-y-sm,
+		$btn-font-size-sm,
+		$btn-border-radius-sm
+	);
 }
