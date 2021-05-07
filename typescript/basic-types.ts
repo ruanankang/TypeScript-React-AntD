@@ -23,4 +23,4 @@ numberOrString = 'ss'
 let arrOfNumbers: number[] = [1, 2, 3];
 
 // 元组 Tuple
-let tuple: [string, number] = ['alice', 14];
+let tuple1: [string, number] = ['alice', 14];
