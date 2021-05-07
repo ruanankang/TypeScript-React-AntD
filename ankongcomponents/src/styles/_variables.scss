@@ -46,8 +46,8 @@ $theme-colors: (
 );
 
 // 字体家族：无衬线字体 等宽字体
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'DIN', 'Segoe UI',
-	Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, Roboto,
+	'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
 	'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !default;
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
 	'Liberation Mono', 'Courier New', monospace !default;

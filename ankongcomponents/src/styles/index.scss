@@ -4,5 +4,8 @@
 // normalize 样式初始化
 @import 'reboot';
 
+// mixin 复用样式
+@import 'mixin';
+
 // 按钮 Button
 @import '../components/Button/style';

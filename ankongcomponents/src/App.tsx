@@ -5,6 +5,7 @@ function App() {
 	return (
 		<>
 			<Button>Primary</Button>
+			<Button disabled>Primary</Button>
 			<Button btnType={ButtonType.Default} size={ButtonSize.Small}>
 				Default
 			</Button>
