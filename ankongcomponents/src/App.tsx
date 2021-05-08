@@ -15,6 +15,9 @@ function App() {
 			<Button btnType={ButtonType.Link} href='https://www.baidu.com'>
 				Default
 			</Button>
+			<Button btnType={ButtonType.Link} disabled href='https://www.baidu.com'>
+				Default
+			</Button>
 		</>
 	);
 }

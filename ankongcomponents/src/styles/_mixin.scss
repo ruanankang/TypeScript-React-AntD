@@ -3,3 +3,36 @@
 	font-size: $font-size;
 	border-radius: $border-radius;
 }
+
+@mixin button-style(
+	$background-color,
+	$border-color,
+	$color,
+	$text-shadow: 0,
+	$hover-background: lighten($background-color, 7.5%),
+	$hover-border-color: lighten($background-color, 10%),
+	$hover-color: $color
+) {
+	color: $color;
+	background-color: $background-color;
+	border-color: $border-color;
+	text-shadow: $text-shadow;
+	&:hover {
+		color: $hover-color;
+		background-color: $hover-background;
+		border-color: $hover-border-color;
+	}
+	&:focus,
+	&.focus {
+		box-shadow: none;
+		color: $hover-color;
+		background-color: $hover-background;
+		border-color: $hover-border-color;
+	}
+	&:disabled,
+	&.disabled {
+		color: $color;
+		background-color: $background-color;
+		border-color: $border-color;
+	}
+}

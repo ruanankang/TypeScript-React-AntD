@@ -1,3 +1,4 @@
+// 按钮样式初始化
 .btn {
 	position: relative;
 	display: inline-block;
@@ -32,6 +33,7 @@
 	}
 }
 
+// 按钮尺寸样式
 .btn-lg {
 	@include button-size(
 		$btn-padding-x-lg,
@@ -48,4 +50,46 @@
 		$btn-font-size-sm,
 		$btn-border-radius-sm
 	);
+}
+
+// 按钮类型样式
+.btn-primary {
+	@include button-style($primary, $primary, $white, $btn-text-shadow);
+}
+
+.btn-danger {
+	@include button-style($danger, $danger, $white, $btn-text-shadow);
+}
+
+.btn-default {
+	@include button-style(
+		$white,
+		$gray-400,
+		$body-color,
+		0,
+		$white,
+		$primary,
+		$primary
+	);
+}
+
+.btn-link {
+	font-weight: $font-weight-normal;
+	color: $btn-link-color;
+	text-decoration: $link-decoration;
+	box-shadow: none;
+	&:hover {
+		color: $btn-link-hover-color;
+		text-decoration: $link-hover-decoration;
+	}
+	&:focus,
+	&.focus {
+		text-decoration: $link-hover-decoration;
+		box-shadow: none;
+	}
+	&:disabled,
+	&.disabled {
+		color: $btn-link-disabled-color;
+		pointer-events: none;
+	}
 }
