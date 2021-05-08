@@ -74,7 +74,7 @@ const Button: React.FC<ButtonProps> = (props) => {
 // 按钮默认值
 Button.defaultProps = {
 	disabled: false,
-	btnType: ButtonType.Primary
+	btnType: ButtonType.Default
 };
 
 export default Button;
