@@ -41,6 +41,24 @@ describe('Button component', () => {
 		expect(element).toBeInTheDocument();
 		expect(element).toHaveClass(`btn-primary klass btn-primary btn-${testProps.size}`);
 	});
-	it('should render a link when btnType equals link and href is provided', () => {});
-	it('should render disabled button when disabled set to true', () => {});
+	it('should render a link when btnType equals link and href is provided', () => {
+		const wrapper = render(
+			<Button btnType={ButtonType.Link} href='www.baidu.com'>
+				Link
+			</Button>
+		);
+		const element = wrapper.getByText('Link');
+		expect(element).toBeInTheDocument();
+		expect(element.tagName).toEqual('A');
+		expect(element).toHaveClass('btn btn-link');
+	});
+	it('should render disabled button when disabled set to true', () => {
+		const wrapper = render(<Button {...disabledProps}>Disabled</Button>);
+		const element = wrapper.getByText('Disabled');
+		expect(element).toBeInTheDocument();
+		// @ts-ignore
+		expect(element.disabled).toBeTruthy();
+		fireEvent.click(element);
+		expect(disabledProps.onClick).not.toHaveBeenCalled();
+	});
 });
