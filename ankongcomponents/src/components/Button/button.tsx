@@ -26,10 +26,12 @@ interface BaseButtonProps {
 }
 
 // 所有button原生属性 （交叉类型）
-type NativeButtonProps = BaseButtonProps & React.ButtonHTMLAttributes<HTMLElement>;
+type NativeButtonProps = BaseButtonProps &
+	React.ButtonHTMLAttributes<HTMLElement>;
 
 // 所有a标签原生属性 （交叉类型）
-type AnchorButtonProps = BaseButtonProps & React.AnchorHTMLAttributes<HTMLElement>;
+type AnchorButtonProps = BaseButtonProps &
+	React.AnchorHTMLAttributes<HTMLElement>;
 
 // Partial将所有属性定义成可选的
 export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>;
@@ -38,7 +40,8 @@ export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>;
  * 按钮 Button
  */
 const Button: React.FC<ButtonProps> = (props) => {
-	const { className, btnType, size, disabled, children, href, ...restProps } = props;
+	const { className, btnType, size, disabled, children, href, ...restProps } =
+		props;
 
 	const classes = classnames('btn', className, {
 		[`btn-${btnType}`]: btnType,
