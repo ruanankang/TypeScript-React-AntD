@@ -1,3 +1,4 @@
+// Button 按钮
 @mixin button-size($padding-x, $padding-y, $font-size, $border-radius) {
 	padding: $padding-y $padding-x;
 	font-size: $font-size;
@@ -35,4 +36,10 @@
 		background-color: $background-color;
 		border-color: $border-color;
 	}
+}
+
+// Alert 提示框
+@mixin alert-color($background, $color) {
+	color: $color;
+	background-color: $background;
 }

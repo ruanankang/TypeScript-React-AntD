@@ -1,0 +1,9 @@
+.alert {
+	display: block;
+	width: $alert-width;
+	@include alert-color($primary, $white);
+	border-width: $border-width;
+	border-radius: $alert-border-radius;
+	border-style: solid;
+	padding: $btn-padding-y $btn-padding-x;
+}
