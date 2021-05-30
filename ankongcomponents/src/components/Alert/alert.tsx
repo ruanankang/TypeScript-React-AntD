@@ -42,4 +42,8 @@ const Alert: React.FC<IAlertProps> = ({
 	) : null;
 };
 
+Alert.defaultProps = {
+	type: 'primary'
+};
+
 export default Alert;
