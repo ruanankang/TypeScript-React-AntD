@@ -5,7 +5,7 @@ import { useState } from 'react';
 export type AlertType = 'success' | 'primary' | 'warning' | 'danger';
 
 interface IAlertProps {
-	type: AlertType;
+	type?: AlertType;
 	title?: string;
 	closable?: boolean;
 	customClose?: string;
