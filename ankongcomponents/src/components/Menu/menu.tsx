@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createContext } from 'react';
 import classNames from 'classnames';
 
 type MenuMode = 'vertical' | 'horizontal';
@@ -12,17 +12,22 @@ export interface IMenuProps {
 }
 
 const Menu: React.FC<IMenuProps> = (props) => {
-	const {
-		className,
-		defaultIndex,
-		mode = 'horizontal',
-		style,
-		onSelect
-	} = props;
+	const { className, defaultIndex, mode, style, children, onSelect } = props;
 
 	const classes = classNames('menu', className, {
 		[`menu-${mode}`]: mode
 	});
 
-	return <div></div>;
+	return (
+		<ul className={classes} style={style}>
+			{children}
+		</ul>
+	);
 };
+
+Menu.defaultProps = {
+	defaultIndex: 0,
+	mode: 'horizontal'
+};
+
+export default Menu;
