@@ -26,14 +26,14 @@ function App() {
 			</Button>
 			<Menu
 				mode='vertical'
-				defaultIndex={1}
+				defaultIndex={0}
 				onSelect={(index) => {
 					alert(index);
 				}}>
+				<MenuItem itemIndex={0}>0</MenuItem>
 				<MenuItem itemIndex={1}>1</MenuItem>
-				<MenuItem itemIndex={2}>2</MenuItem>
-				<MenuItem itemIndex={3} disabled>
-					3
+				<MenuItem itemIndex={2} disabled>
+					2
 				</MenuItem>
 			</Menu>
 		</>
