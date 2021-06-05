@@ -1,6 +1,8 @@
 import React from 'react';
 import Button, { ButtonType, ButtonSize } from './components/Button/button';
 import Alert from './components/Alert';
+import Menu from './components/Menu/menu';
+import MenuItem from './components/Menu/menuItem';
 
 function App() {
 	return (
@@ -22,6 +24,14 @@ function App() {
 			<Button btnType={ButtonType.Link} disabled href='https://www.baidu.com'>
 				Default
 			</Button>
+			<Menu
+				defaultIndex={1}
+				onSelect={(index) => {
+					alert(index);
+				}}>
+				<MenuItem itemIndex={1}>1</MenuItem>
+				<MenuItem itemIndex={2}>2</MenuItem>
+			</Menu>
 		</>
 	);
 }

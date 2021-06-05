@@ -35,7 +35,7 @@ const Menu: React.FC<IMenuProps> = (props) => {
 	};
 
 	const passedContext: IMenuContext = {
-		currentItemIndex: currentSelected ? currentSelected : 0,
+		currentItemIndex: currentSelected ? currentSelected : 1,
 		onSelect: handleClick
 	};
 
