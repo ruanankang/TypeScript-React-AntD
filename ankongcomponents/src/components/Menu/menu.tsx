@@ -40,7 +40,10 @@ const Menu: React.FC<IMenuProps> = (props) => {
 	};
 
 	return (
-		<ul className={classes} style={style as React.CSSProperties}>
+		<ul
+			className={classes}
+			style={style as React.CSSProperties}
+			data-testid='test-menu'>
 			<MenuContext.Provider value={passedContext}>
 				{children}
 			</MenuContext.Provider>

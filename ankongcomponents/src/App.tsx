@@ -25,12 +25,16 @@ function App() {
 				Default
 			</Button>
 			<Menu
+				mode='vertical'
 				defaultIndex={1}
 				onSelect={(index) => {
 					alert(index);
 				}}>
 				<MenuItem itemIndex={1}>1</MenuItem>
 				<MenuItem itemIndex={2}>2</MenuItem>
+				<MenuItem itemIndex={3} disabled>
+					3
+				</MenuItem>
 			</Menu>
 		</>
 	);
