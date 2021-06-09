@@ -3,6 +3,7 @@ import Button, { ButtonType, ButtonSize } from './components/Button/button';
 import Alert from './components/Alert';
 import Menu from './components/Menu/menu';
 import MenuItem from './components/Menu/menuItem';
+import SubMenu from './components/Menu/subMenu';
 
 function App() {
 	return (
@@ -25,16 +26,17 @@ function App() {
 				Default
 			</Button>
 			<Menu
-				mode='vertical'
 				defaultIndex={0}
 				onSelect={(index) => {
 					alert(index);
 				}}>
-				<MenuItem itemIndex={0}>0</MenuItem>
-				<MenuItem itemIndex={1}>1</MenuItem>
-				<MenuItem itemIndex={2} disabled>
-					2
-				</MenuItem>
+				<MenuItem>0</MenuItem>
+				<MenuItem>1</MenuItem>
+				<MenuItem disabled>2</MenuItem>
+				<SubMenu title='test'>
+					<MenuItem>3</MenuItem>
+					<MenuItem>4</MenuItem>
+				</SubMenu>
 			</Menu>
 		</>
 	);
