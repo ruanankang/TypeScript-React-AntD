@@ -52,7 +52,7 @@
 		}
 	}
 	.submenu-wrap {
-		//display: none;
+		// display: none;
 		list-style: none;
 		padding-left: 0;
 		white-space: nowrap;
@@ -70,17 +70,32 @@
 	}
 }
 
+.menu-horizontal {
+	> .menu-item {
+		border-bottom: $menu-item-active-border-width solid transparent;
+	}
+	.submenu-wrap {
+		position: absolute;
+		background: $white;
+		z-index: 100;
+		top: calc(100% + 8px);
+		left: 0;
+		border: $menu-border-width solid $menu-border-color;
+		box-shadow: $submenu-box-shadow;
+	}
+}
+
 .menu-vertical {
 	flex-direction: column;
 	border-bottom: 0px;
+	margin: 10px 20px;
 	border-right: $menu-border-width solid $menu-border-color;
-	margin: 20px;
-	.menu-item {
+	> .menu-item {
 		border-left: $menu-item-active-border-width solid transparent;
 		&.is-active,
 		&:hover {
+			border-bottom: 0px;
 			border-left: $menu-item-active-border-width solid $menu-item-active-color;
-			border-bottom: none;
 		}
 	}
 }
